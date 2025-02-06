@@ -35,6 +35,7 @@ if st.button("生成"):
         st.write(response)
       elif (target == '売上分析'):
         response = requests.get('https://www.ryhintl.com/crewai/sumgen/')
+        print(response)
         st.write(response)
       elif (target == 'ニュース要約'):
         response = requests.get('https://www.ryhintl.com/crewai/summary_news/?parm='+prompt)
