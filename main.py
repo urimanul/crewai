@@ -34,7 +34,7 @@ if st.button("生成"):
         response = requests.get('https://www.ryhintl.com/crewai/regionsum/')
         st.write(response)
       elif (target == '売上分析'):
-        response = requests.get('http://localhost:8000/sumgen/')
+        response = requests.get('https://www.ryhintl.com/crewai/sumgen/')
         print(response)
         st.write(response)
       elif (target == 'ニュース要約'):
