@@ -23,10 +23,14 @@ if st.button("生成"):
       # GETリクエストを送信
       if (target == 'RAG'):
         response = requests.get('https://www.ryhintl.com/crewai/cohere?prompt='+prompt)
-        st.write(response.content.decode('utf-8'))
+        new_resp = response.content.decode('utf-8').replace('"{', '{')
+        new_resp = new_resp.replace('}"', '}')
+        st.write(new_resp)
       elif (target == 'EPRAG'):
         response = requests.get('https://www.ryhintl.com/crewai/eprag?prompt='+prompt)
-        st.write(response.content.decode('utf-8'))
+        new_resp = response.content.decode('utf-8').replace('"{', '{')
+        new_resp = new_resp.replace('}"', '}')
+        st.write(new_resp)
       elif (target == 'Candidate Match'):
         response = requests.get('https://www.ryhintl.com/crewai/match/?job='+prompt)
         st.write(response.content.decode('utf-8'))
