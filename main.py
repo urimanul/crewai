@@ -7,7 +7,7 @@ options = ['RAG', 'EPRAG', 'Candidate Match', 'Atlas', '売上分析', 'ニュ�
 st.title("RYH CrewAI")
 
 # Select Target
-target = = st.selectbox(
+target = st.selectbox(
     'CrewAI ファンクションを選んでください:',
     options,
     index=0,  # デフォルトで最初の選択肢が選ばれる
