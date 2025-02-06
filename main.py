@@ -23,23 +23,22 @@ if st.button("生成"):
       # GETリクエストを送信
       if (target == 'RAG'):
         response = requests.get('https://www.ryhintl.com/crewai/cohere?prompt='+prompt)
-        st.write(response)
+        st.write(response.content.decode('utf-8'))
       elif (target == 'EPRAG'):
         response = requests.get('https://www.ryhintl.com/crewai/eprag?prompt='+prompt)
-        st.write(response)
+        st.write(response.content.decode('utf-8'))
       elif (target == 'Candidate Match'):
         response = requests.get('https://www.ryhintl.com/crewai/match/?job='+prompt)
-        st.write(response)
+        st.write(response.content.decode('utf-8'))
       elif (target == 'Atlas'):
         response = requests.get('https://www.ryhintl.com/crewai/regionsum/')
-        st.write(response)
+        st.write(response.content.decode('utf-8'))
       elif (target == '売上分析'):
         response = requests.get('https://www.ryhintl.com/crewai/sumgen/')
-        print(response)
-        st.write(response)
+        st.write(response.content.decode('utf-8'))
       elif (target == 'ニュース要約'):
         response = requests.get('https://www.ryhintl.com/crewai/summary_news/?parm='+prompt)
-        st.write(response)
+        st.write(response.content.decode('utf-8'))
     except:
       print("HTTPエラー:")
       st.write("HTTPエラー:")
