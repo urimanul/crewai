@@ -21,7 +21,7 @@ prompt = st.text_input("プロンプトを入力してください:")
 if st.button("生成"):
     try:
       # GETリクエストを送信
-      if (target == 'RAG):
+      if (target == 'RAG'):
         response = requests.get('https://www.ryhintl.com/crewai/cohere?prompt='+prompt)
         st.write(response)
       elif (target == 'EPRAG'):
